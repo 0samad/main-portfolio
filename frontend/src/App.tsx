@@ -1,4 +1,3 @@
-import React from 'react';
 import { DarkModeProvider } from './hooks/useDarkMode';
 import Header from './components/common/Header';
 import Hero from './components/sections/Hero';
