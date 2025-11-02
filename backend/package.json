@@ -10,7 +10,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "echo \"Linting not configured yet\""
   },
-  "keywords": ["express", "typescript", "api"],
+  "keywords": [
+    "express",
+    "typescript",
+    "api"
+  ],
   "author": "Abdsamad",
   "license": "MIT",
   "dependencies": {
@@ -20,6 +24,7 @@
     "helmet": "^8.1.0"
   },
   "devDependencies": {
+    "@types/compression": "^1.8.1",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.5",
     "@types/node": "^24.9.2",
