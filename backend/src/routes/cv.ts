@@ -51,15 +51,16 @@ router.get('/download-cv', asyncHandler(async (req: Request, res: Response): Pro
 }));
 
 // GET /api/cv-info - Get CV information (metadata)
-router.get('/cv-info', asyncHandler(async (req: Request, res: Response) => {
+router.get('/cv-info', asyncHandler(async (req: Request, res: Response): Promise<void> => {
   const cvFileName = 'CV_Abdsamad.pdf';
   const cvPath = path.join(__dirname, '../../frontend/public', cvFileName);
 
   if (!fs.existsSync(cvPath)) {
-    return res.status(404).json({
+    res.status(404).json({
       success: false,
       error: 'CV file not found'
     });
+    return;
   }
 
   try {
