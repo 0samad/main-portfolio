@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Database, Code, BarChart3, TrendingUp, Calendar, Target } from 'lucide-react';
+import { Database, Code, BarChart3, TrendingUp, Target } from 'lucide-react';
 import { PROJECTS, ANIMATION_VARIANTS } from '../../utils/constants';
 
 const Projects: React.FC = () => {
