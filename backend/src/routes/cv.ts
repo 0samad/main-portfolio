@@ -6,16 +6,17 @@ import { asyncHandler } from '../middleware/errorHandler';
 const router = Router();
 
 // GET /api/download-cv - Download CV file
-router.get('/download-cv', asyncHandler(async (req: Request, res: Response) => {
+router.get('/download-cv', asyncHandler(async (req: Request, res: Response): Promise<void> => {
   const cvFileName = 'CV_Abdsamad.pdf';
   const cvPath = path.join(__dirname, '../../frontend/public', cvFileName);
 
   // Check if CV file exists
   if (!fs.existsSync(cvPath)) {
-    return res.status(404).json({
+    res.status(404).json({
       success: false,
       error: 'CV file not found'
     });
+    return;
   }
 
   try {
